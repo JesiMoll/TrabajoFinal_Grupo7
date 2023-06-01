@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Proyecto">
+  <ClassDiagramComponents>
+    <Class name="Proyecto" package="" visibility="public" xPosition="15.0" yPosition="16.0">
+      <Fields>
+        <Field name="id_Proyecto" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="descripcion" type="String" visibility="private"/>
+        <Field name="fechaInicio" type="LocalDate" visibility="private"/>
+        <Field name="estado" type="Boolean" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Equipo" package="" visibility="public" xPosition="454.0" yPosition="270.0">
+      <Fields>
+        <Field name="id_Proyecto" type="int" visibility="private"/>
+        <Field name="id_Equipo" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="FechaCreacion" type="LocalDate" visibility="private"/>
+        <Field name="estado" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Miembro" package="" visibility="public" xPosition="526.0" yPosition="16.0">
+      <Fields>
+        <Field name="id_Miembro" type="int" visibility="private"/>
+        <Field name="DNI" type="int" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="estado" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="EquipoMiembros" package="" visibility="public" xPosition="208.0" yPosition="270.0">
+      <Fields>
+        <Field name="id_MiembroEq" type="int" visibility="private"/>
+        <Field name="fechaIncorporacion" type="LocalDate" visibility="private"/>
+        <Field name="id_Equipo" type="int" visibility="private"/>
+        <Field name="id_Miembro" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Tarea" package="" visibility="public" xPosition="257.0" yPosition="16.0">
+      <Fields>
+        <Field name="id_Tarea" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="FechaCreacion" type="LocalDate" visibility="private"/>
+        <Field name="FechaCierre" type="LocalDate" visibility="private"/>
+        <Field name="estado" type="boolean" visibility="private"/>
+        <Field name="id_MiembroEq" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Comentarios" package="" visibility="public" xPosition="15.0" yPosition="252.0">
+      <Fields>
+        <Field name="id_Comentario" type="int" visibility="private"/>
+        <Field name="comentario" type="String" visibility="private"/>
+        <Field name="FechaAvance" type="LocalDate" visibility="private"/>
+        <Field name="id_Tarea" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="Tiene" source="Tarea" target="Miembro" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="Tiene" source="Tarea" target="Proyecto" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
