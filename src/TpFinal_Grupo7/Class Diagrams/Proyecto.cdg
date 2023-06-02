@@ -2,7 +2,7 @@
 
 <ClassDiagram name="Proyecto">
   <ClassDiagramComponents>
-    <Class name="Proyecto" package="" visibility="public" xPosition="21.0" yPosition="6.0">
+    <Class name="Proyecto" package="" visibility="public" xPosition="8.0" yPosition="6.0">
       <Fields>
         <Field name="id_Proyecto" type="int" visibility="private"/>
         <Field name="nombre" type="String" visibility="private"/>
@@ -36,7 +36,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Equipo" package="" visibility="public" xPosition="50.0" yPosition="409.0">
+    <Class name="Equipo" package="" visibility="public" xPosition="321.0" yPosition="345.0">
       <Fields>
         <Field name="id_Proyecto" type="int" visibility="private"/>
         <Field name="id_Equipo" type="int" visibility="private"/>
@@ -44,10 +44,17 @@
         <Field name="FechaCreacion" type="LocalDate" visibility="private"/>
         <Field name="estado" type="boolean" visibility="private"/>
       </Fields>
-      <Constructors/>
-      <Methods/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getId_Proyecto" returnType="int" visibility="public"/>
+        <Method name="setId_Proyecto" returnType="void" visibility="public">
+          <Argument type="int" name="id_Proyecto"/>
+        </Method>
+      </Methods>
     </Class>
-    <Class name="Miembro" package="" visibility="public" xPosition="578.0" yPosition="25.0">
+    <Class name="Miembro" package="" visibility="public" xPosition="472.0" yPosition="207.0">
       <Fields>
         <Field name="id_Miembro" type="int" visibility="private"/>
         <Field name="DNI" type="int" visibility="private"/>
@@ -55,20 +62,29 @@
         <Field name="nombre" type="String" visibility="private"/>
         <Field name="estado" type="boolean" visibility="private"/>
       </Fields>
-      <Constructors/>
-      <Methods/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getId_Miembro" returnType="int" visibility="public"/>
+        <Method name="setId_Miembro" returnType="void" visibility="public">
+          <Argument type="int" name="id_Miembro"/>
+        </Method>
+      </Methods>
     </Class>
-    <Class name="EquipoMiembros" package="" visibility="public" xPosition="328.0" yPosition="267.0">
+    <Class name="EquipoMiembros" package="" visibility="public" xPosition="587.0" yPosition="6.0">
       <Fields>
         <Field name="id_MiembroEq" type="int" visibility="private"/>
         <Field name="fechaIncorporacion" type="LocalDate" visibility="private"/>
         <Field name="id_Equipo" type="int" visibility="private"/>
         <Field name="id_Miembro" type="int" visibility="private"/>
       </Fields>
-      <Constructors/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
       <Methods/>
     </Class>
-    <Class name="Tarea" package="" visibility="public" xPosition="318.0" yPosition="6.0">
+    <Class name="Tarea" package="" visibility="public" xPosition="233.0" yPosition="6.0">
       <Fields>
         <Field name="id_Tarea" type="int" visibility="private"/>
         <Field name="nombre" type="String" visibility="private"/>
@@ -78,22 +94,41 @@
         <Field name="id_MiembroEq" type="int" visibility="private"/>
         <Field name="id_Proyecto" type="int" visibility="private"/>
       </Fields>
-      <Constructors/>
-      <Methods/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getId_Tarea" returnType="int" visibility="public"/>
+        <Method name="setId_Tarea" returnType="void" visibility="public">
+          <Argument type="int" name="id_Tarea"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getFechaCreacion" returnType="LocalDate" visibility="public"/>
+      </Methods>
     </Class>
-    <Class name="Comentarios" package="" visibility="public" xPosition="526.0" yPosition="314.0">
+    <Class name="Comentarios" package="" visibility="public" xPosition="15.0" yPosition="377.0">
       <Fields>
         <Field name="id_Comentario" type="int" visibility="private"/>
         <Field name="comentario" type="String" visibility="private"/>
         <Field name="FechaAvance" type="LocalDate" visibility="private"/>
         <Field name="id_Tarea" type="int" visibility="private"/>
       </Fields>
-      <Constructors/>
-      <Methods/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getId_Comentario" returnType="int" visibility="public"/>
+        <Method name="setId_Comentario" returnType="void" visibility="public">
+          <Argument type="int" name="id_Comentario"/>
+        </Method>
+      </Methods>
     </Class>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
-    <HasRelation name="Tiene" source="Tarea" target="Proyecto" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
     <HasRelation name="Tiene" source="Tarea" target="Miembro" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="Tiene" source="Tarea" target="Proyecto" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
   </ClassDiagramRelations>
 </ClassDiagram>
