@@ -13,24 +13,35 @@ public class Tarea {
 
     private LocalDate FechaCierre;
 
-    private boolean estado;
-
+    private boolean estado;// 1.la tarea esta finalizada. 0.progreso.
     private int id_MiembroEq;
+    
+    private int id_Proyecto;
 
     public Tarea() {
     }
-
-    public Tarea(int id_Tarea, String nombre, LocalDate FechaCreacion, LocalDate FechaCierre, boolean estado, int id_MiembroEq) {
+    //El constructor con Id, lo uso para modificar.
+    public Tarea(int id_Tarea, String nombre, LocalDate FechaCreacion, LocalDate FechaCierre, boolean estado, int id_MiembroEq,int id_Proyecto) {
         this.id_Tarea = id_Tarea;
         this.nombre = nombre;
         this.FechaCreacion = FechaCreacion;
         this.FechaCierre = FechaCierre;
         this.estado = estado;
         this.id_MiembroEq = id_MiembroEq;
+        this.id_Proyecto = id_Proyecto;
     }
-
+    //El constructor sin Id, lo uso, por ej. para crear o guardar una tarea.
+    public Tarea(String nombre, LocalDate FechaCreacion, LocalDate FechaCierre, boolean estado, int id_MiembroEq, int id_Proyecto) {
+        this.nombre = nombre;
+        this.FechaCreacion = FechaCreacion;
+        this.FechaCierre = FechaCierre;
+        this.estado = estado;
+        this.id_MiembroEq = id_MiembroEq;
+        this.id_Proyecto = id_Proyecto;
+    }
+    
    
-
+    
     public int getId_Tarea() {
         return id_Tarea;
     }
@@ -79,11 +90,21 @@ public class Tarea {
         this.id_MiembroEq = id_MiembroEq;
     }
 
+    public int getId_Proyecto() {
+        return id_Proyecto;
+    }
+
+    public void setId_Proyecto(int id_Proyecto) {
+        this.id_Proyecto = id_Proyecto;
+    }
+
     @Override
     public String toString() {
-        return "Tarea{" + "id_Tarea=" + id_Tarea + ", nombre=" + nombre + ", FechaCreacion=" + FechaCreacion + ", FechaCierre=" + FechaCierre + ", estado=" + estado + ", id_MiembroEq=" + id_MiembroEq + '}';
+        return "Tarea{" + "id_Tarea=" + id_Tarea + ", nombre=" + nombre + ", FechaCreacion=" + FechaCreacion + ", FechaCierre=" + FechaCierre + ", estado=" + estado + ", id_MiembroEq=" + id_MiembroEq + ", id_Proyecto=" + id_Proyecto + '}';
     }
     
+    
+
     
 
     

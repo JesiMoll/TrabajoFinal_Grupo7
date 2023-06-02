@@ -1,11 +1,8 @@
 package Modelo;
 
-
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 
-public class Proyecto {
+    public class Proyecto {
 
     private int id_Proyecto;
 
@@ -17,22 +14,28 @@ public class Proyecto {
     
     private Boolean estado;
     
-    private List<Tarea> tareas;
 
     public Proyecto() {
     }
 
-    public Proyecto(int id_Proyecto, String nombre, String descripcion, LocalDate fechaInicio, Boolean estado) {
+    public Proyecto(int id_Proyecto, String nombre, String descripcion, LocalDate fechaInicio, Boolean estado){
         this.id_Proyecto = id_Proyecto;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.fechaInicio = fechaInicio;
         this.estado = estado;
-        this.tareas = new ArrayList<>();
+       
     }
 
+    public Proyecto(String nombre, String descripcion, LocalDate fechaInicio, Boolean estado){
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.fechaInicio = fechaInicio;
+        this.estado = estado;
+        
+    }
     
-
+   
     public int getId_Proyecto() {
         return id_Proyecto;
     }
@@ -73,65 +76,58 @@ public class Proyecto {
         this.estado = estado;
     }
 
-    public List<Tarea> getTareas() {
-        return tareas;
-    }
-
-    public void setTareas(List<Tarea> tareas) {
-        this.tareas = tareas;
-    }
+//    public List<Tarea> getTareas() {
+//       return tareas;
+//    }
+//
+//    public void setTareas(List<Tarea> tareas) {
+//      this.tareas = tareas;
+//    }
     
     //Los usuarios podrán crear nuevos proyectos : Crear proyecto.
-    public void crearProyecto() {
+//    public void crearProyecto() {
+//    
+//    System.out.println("Id del Proyecto: " + id_Proyecto);    
+//    System.out.println("Proyecto creado: " + nombre);
+//    System.out.println("Descripción Proyecto: " + descripcion);
+//    System.out.println("Fecha de inicio: " + fechaInicio);
+//    
+//    if(estado){
+//      System.out.println("Proyecto Activo");  
+//    }else{
+//      System.out.println("Proyecto Inactivo"); 
+//    }
     
-    System.out.println("Id del Proyecto: " + id_Proyecto);    
-    System.out.println("Proyecto creado: " + nombre);
-    System.out.println("Descripción Proyecto: " + descripcion);
-    System.out.println("Fecha de inicio: " + fechaInicio);
+    //Tarea tarea1 = new Tarea(1,"Crear una Base de Datos",LocalDate.now(),null,false,1);
+    //Tarea tarea2 = new Tarea(1,"Proyecto en Netbeans",LocalDate.now(),null,false,2);
+    //Tarea tarea3 = new Tarea(1,"Desarrollo de todas las clases principales del dominio (ABM)",LocalDate.now(),null,true,3);
     
-    if(estado){
-      System.out.println("Proyecto Activo");  
-    }else{
-      System.out.println("Proyecto Inactivo"); 
-    }
+    //tareas.add(tarea1);
+    //tareas.add(tarea2);
+    //tareas.add(tarea3);
     
-    Tarea tarea1 = new Tarea(1,"Crear una Base de Datos",LocalDate.now(),null,false,1);
-    Tarea tarea2 = new Tarea(1,"Proyecto en Netbeans",LocalDate.now(),null,false,2);
-    Tarea tarea3 = new Tarea(1,"Desarrollo de todas las clases principales del dominio (ABM)",LocalDate.now(),null,true,3);
+    //this.estado= true;
     
-    tareas.add(tarea1);
-    tareas.add(tarea2);
-    tareas.add(tarea3);
-    
-    this.estado= true;
-    
-    informeProyecto();
-    } 
-    
-    private void informeProyecto() {
-        System.out.println("\nDetalle Completo del Proyecto: " + id_Proyecto);
-        System.out.println("Nombre: " + nombre);
-        System.out.println("Descripción: " + descripcion);
-        System.out.println("Fecha de inicio: " + fechaInicio);
-        System.out.println("Estado: " + (estado ? "Activo" : "Inactivo"));
-        
-        System.out.println("Tareas asignadas:");
-        
-        for(int i=0;i<tareas.size();i++){
-        
-        Tarea tarea = tareas.get(i);
-        System.out.println("- " + tarea.getNombre());
-        
-      }
-        
-    }
-
-    @Override
-    public String toString() {
-        return "Proyecto{" + "id_Proyecto=" + id_Proyecto + ", nombre=" + nombre + ", descripcion=" + descripcion + ", fechaInicio=" + fechaInicio + ", estado=" + estado + ", tareas=" + tareas + '}';
-    }
-    
-    
+//    informeProyecto();
+//    } 
+//    
+//    private void informeProyecto() {
+//        System.out.println("\nDetalle Completo del Proyecto: " + id_Proyecto);
+//        System.out.println("Nombre: " + nombre);
+//        System.out.println("Descripción: " + descripcion);
+//        System.out.println("Fecha de inicio: " + fechaInicio);
+//        System.out.println("Estado: " + (estado ? "Activo" : "Inactivo"));
+//        
+//        System.out.println("Tareas asignadas:");
+//        
+//        for(int i=0;i<tareas.size();i++){
+//        
+//        Tarea tarea = tareas.get(i);
+//        System.out.println("- " + tarea.getNombre());
+//        
+//      }
+//        
+//    }
 }
         
 

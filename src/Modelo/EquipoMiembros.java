@@ -23,6 +23,13 @@ public class EquipoMiembros {
         this.id_Miembro = id_Miembro;
     }
 
+    public EquipoMiembros(LocalDate fechaIncorporacion, int id_Equipo, int id_Miembro) {
+        this.fechaIncorporacion = fechaIncorporacion;
+        this.id_Equipo = id_Equipo;
+        this.id_Miembro = id_Miembro;
+    }
+    
+
     public int getId_MiembroEq() {
         return id_MiembroEq;
     }

@@ -16,8 +16,16 @@ public class Miembro {
     public Miembro() {
     }
 
+    
     public Miembro(int id_Miembro, int DNI, String apellido, String nombre, Boolean estado) {
         this.id_Miembro = id_Miembro;
+        this.DNI = DNI;
+        this.apellido = apellido;
+        this.nombre = nombre;
+        this.estado = estado;
+    }
+    
+    public Miembro(int DNI, String apellido, String nombre, Boolean estado) {
         this.DNI = DNI;
         this.apellido = apellido;
         this.nombre = nombre;
